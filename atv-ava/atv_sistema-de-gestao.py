@@ -1,3 +1,6 @@
+import os
+os.system ("cls||clear")
+
 # Lista para armazenar os livros, cada livro será um dicionário
 biblioteca = []
 
@@ -25,6 +28,7 @@ def cadastrar_livro():
     biblioteca.append(novo_livro)
     print(f"Livro '{titulo}' cadastrado com sucesso!")
 
+# Cadastro de livros
 def listar_livros():
     """Lista todos os livros cadastrados."""
     print("\n--- Lista de Todos os Livros ---")
@@ -40,8 +44,9 @@ def listar_livros():
         print(f"  Status: {livro['status']}")
     print("-" * 20)
 
+# Função buscar livros já cadastrados
 def buscar_livro_por_titulo():
-    """Busca livros com título que a palavra-chave foi informada"""
+    """ Busca livros com título que a palavra-chave foi informada """
     print("\n Buscar Livro por Título ")
     if not biblioteca:
         print("Nenhum livro cadastrado")
@@ -65,9 +70,9 @@ def buscar_livro_por_titulo():
             print(f"  Código: {livro['codigo']}")
             print(f"  Status: {livro['status']}")
         print("-" * 20)
-
+# Função para buscar livros
 def alterar_status_livro():
-    """Altera o status de um livro (Emprestado/Disponível) buscando pelo Código."""
+    """ Altera o status de um livro (Emprestado/Disponível) buscando pelo Código """
     print("\n--- Alterar Status do Livro ---")
     if not biblioteca:
         print("Nenhum livro cadastrado para alterar o status.")
@@ -111,9 +116,9 @@ def exibir_menu():
     while True:
         print("\n--- Sistema de Gestão de Biblioteca ---")
         print("1. Cadastrar")
-        print("2. Status Livros")
-        print("3. Buscar Livro")
-        print("4. Alterar Livro")
+        print("2. Status livros")
+        print("3. Buscar livro")
+        print("4. Alterar status do livro")
         print("5. Sair")
 
         opcao = input("Escolha uma opção: ")
